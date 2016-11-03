@@ -18,15 +18,10 @@ AnyFolder CachedMuscleCalibration =
   };
   
   AnyOperationMacro LoadFromFile = {
-    MacroStr  = {"classoperation Main" + strquote("Load Values") +"--file=" + 
-      strquote(FilePathCompleteOf(.SavePath) +"/"+ .FileName +".anyset" )
+    MacroStr  = {"classoperation Main" + strquote("Load Values") +"--file=" + strquote(FilePathCompleteOf(.SavePath) +"/"+ .FileName +".anyset" ),
+                 "classoperation Main" + strquote("Update Values") 
     };
   };
-  AnyOperationMacro UpdateLoadedValues = {
-    MacroStr  = {"classoperation Main" + strquote("Update Values") +"--file=" + 
-      strquote(FilePathCompleteOf(.SavePath) +"/"+ .FileName +".anyset" )
-    };
-  };  
 };
 
 
@@ -42,6 +37,5 @@ Main =
   AnyOperationSequence LoadCalibration = 
   {
     AnyOperation& Load = Main.CachedMuscleCalibration.LoadFromFile ;
-    AnyOperation& Update = Main.CachedMuscleCalibration.UpdateLoadedValues;
   };
 };
