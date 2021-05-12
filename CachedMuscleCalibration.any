@@ -5,7 +5,7 @@ AnyFolder CachedMuscleCalibration =
   
   AnyOperationSetValue MarkMuscleParametersAsChanged = 
   {
-    Source = ObjSearch("Main.HumanModel.BodyModel.*.*.MusPar.*.Lt0");
+    Source = ObjSearchRecursive("Main.HumanModel.BodyModel", "Lt0", "AnyVar");
     Target = Source;
   };     
   
