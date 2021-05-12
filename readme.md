@@ -8,3 +8,5 @@ The solution is to save the result of the calibration procedure and just load th
 
 
 This small example model shows how to save the result of a calibration procedure so it can be reused in other models.
+
+![image](https://user-images.githubusercontent.com/1038978/117982217-152feb80-b336-11eb-96b1-cc4a5aad38f0.png)
